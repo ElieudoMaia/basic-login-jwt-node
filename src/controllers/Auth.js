@@ -1,8 +1,9 @@
+require('dotenv').config()
 const jwt = require('jsonwebtoken')
 const { v4: uuid } = require('uuid')
 
 function jwtSign(jwtPayload) {
-    return jwt.sign(jwtPayload, 'myprivatekey', {
+    return jwt.sign(jwtPayload, process.env.AUTH_JWT_SECRET, {
         expiresIn: 60
     })
 }
