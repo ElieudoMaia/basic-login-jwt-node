@@ -29,7 +29,7 @@ module.exports = {
     
         const { email, password } =req.body
 
-        if(email !== 'elieudo.maia@gmail.com' || password !== '123') {
+        if(email !== 'test@gmail.com' || password !== 'test') {
             return resp.json({
                 error: 'User or password wrong'
             })
